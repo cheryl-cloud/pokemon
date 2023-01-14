@@ -16,9 +16,9 @@ const HeaderLayout = () => {
           /> */}
         {/* </MediaQuery> */}
         <Group position="apart" mx="lg" w="100%">
-        <Text fz="xl" fw="bold">Pokemon Center</Text>
+        <Text component='a' href='/' fz="xl" fw="bold">Pokemon Center</Text>
         <Group>
-        <Button radius="xl" uppercase component={Link} to="/list">List</Button>
+        {/* <Button radius="xl" uppercase component={Link} to="/list">List</Button> */}
         <Button radius="xl" uppercase component={Link} to="/search">search</Button>
         <Button radius="xl" uppercase component={Link} to="/generation">Generation</Button>
         </Group>

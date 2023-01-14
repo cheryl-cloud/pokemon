@@ -1,9 +1,11 @@
 import React from 'react'
 import { useRoutes } from 'react-router'
 import { useRouteError } from 'react-router-dom'
+import Generation from './Generation'
 import Home from './Home'
 import Layout from './Layout'
 import PokeInfo from './PokeInfo'
+import Search from './Search'
 
 const routes = [
     {
@@ -15,6 +17,14 @@ const routes = [
             {
                 path:"pokeInfo/:id", 
                 element: <PokeInfo />,
+            },
+            {
+                path:"search", 
+                element: <Search />,
+            },
+            {
+                path:"generation", 
+                element: <Generation />,
             },
         ]
     },
