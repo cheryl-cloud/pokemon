@@ -5,7 +5,7 @@ import { Text, Image, SimpleGrid, Container, Title, Stack, Box } from '@mantine/
 
 const PokeInfo = () => {
     const { id } = useParams()
-    const { data } = pokemonApi.useGetByIdQuery(id)
+    const { data } = pokemonApi.useGetByIdQuery(id||"")
     if (!data) return <Box>pokemon not found</Box>
     return (
         <>
