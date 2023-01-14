@@ -23,8 +23,8 @@ const PokeInfo = () => {
             >
                 <Text tt="capitalize">Pokemon Name：{id}</Text>
                 <Text tt="capitalize">Pokemon ID：{data?.id}</Text>
-                <Text>{`Pokemon Weight： ${data?.weight}`}</Text>
-                <Text>{`Pokemon Height： ${data?.height}`}</Text>
+                <Text>{`Pokemon Weight： ${data?.weight} kg`}</Text>
+                <Text>{`Pokemon Height： ${data?.height} cm`}</Text>
             </Stack>
             <SimpleGrid 
                 cols={2} 
@@ -33,7 +33,14 @@ const PokeInfo = () => {
                     borderRadius:"10px",
                     padding: "1rem",
                     boxShadow: "5px 5px 0px black"
-                    }}>
+                    }}
+                breakpoints={[
+                    { maxWidth: 980, cols: 2, spacing: 'md' },
+                    // { maxWidth: 755, cols: 2, spacing: 'sm' },
+                    { maxWidth: 600, cols: 1, spacing: 'sm' },
+                    ]}    
+                >
+
                 <Stack align="center">
                     <Text color={"white"} fw={"bold"}>Front Default</Text>
                     {data.sprites.front_default !== null ? (

@@ -29,7 +29,7 @@ const Search = () => {
                 {...field} />
           )}
         />
-      <Button type="submit">Submit</Button>
+      <Button my={"md"} radius="xl" uppercase type="submit">Submit</Button>
     </form>
     {data?.id ? (
         <>
@@ -56,7 +56,13 @@ const Search = () => {
                     borderRadius:"10px",
                     padding: "1rem",
                     boxShadow: "5px 5px 0px black"
-                    }}>
+                    }}
+                breakpoints={[
+                    { maxWidth: 980, cols: 2, spacing: 'md' },
+                    // { maxWidth: 755, cols: 2, spacing: 'sm' },
+                    { maxWidth: 600, cols: 1, spacing: 'sm' },
+                    ]}    
+            >          
                 <Stack align="center">
                     <Text color={"white"} fw={"bold"}>Front Default</Text>
                     {data.sprites.front_default !== null ? (
