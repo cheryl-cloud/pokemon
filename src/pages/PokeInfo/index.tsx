@@ -23,8 +23,8 @@ const PokeInfo = () => {
             >
                 <Text tt="capitalize">Pokemon Name：{id}</Text>
                 <Text tt="capitalize">Pokemon ID：{data?.id}</Text>
-                <Text>{`Pokemon Weight： ${data?.weight} kg`}</Text>
-                <Text>{`Pokemon Height： ${data?.height} cm`}</Text>
+                <Text>{`Pokemon Weight： ${data?.weight}`}</Text>
+                <Text>{`Pokemon Height： ${data?.height}`}</Text>
             </Stack>
             <SimpleGrid 
                 cols={2} 
