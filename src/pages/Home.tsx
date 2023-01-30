@@ -25,7 +25,7 @@ const Home = () => {
         wrap="wrap"
         bg="#fffff"
         >
-            {data?.results?.map((pokemon) => (
+            {data?.results?.map((pokemon, index) => (
                 <Box 
                     component={Link}
                     to={`/pokeInfo/${pokemon.name}`}
@@ -39,7 +39,9 @@ const Home = () => {
                             overflow: "hidden",
                         }}
                     >
-                        <img src={`https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`} alt={pokemon.name} width={"100%"} height={`100%`} style={{ objectFit: "contain" }} />
+                        {/* <img src={`https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`} alt={pokemon.name} width={"100%"} height={`100%`} style={{ objectFit: "contain" }} /> */}
+                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonList.offset+index+1}.png`} alt={pokemon.name} width={"100%"} height={`100%`} style={{ objectFit: "contain" }} />
+                        
                     </Box>
                     <Text align="center" tt="capitalize">
                         {pokemon.name}
